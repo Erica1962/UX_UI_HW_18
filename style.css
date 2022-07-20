@@ -1,0 +1,314 @@
+/* HERO */
+.nav, .content, .about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --page-margin: max(16vw, 40px); /* Check documentation for max() - chooses the smaller value of the options provided. Good for mixing and matching fixed + relative units */
+  --ln: 1px solid #424242;
+}
+
+/* TEXT STYLE */
+
+p.large {
+ font-size: 1.5rem; 
+}
+
+/* BUTTONS */
+button.primary {
+  background-color: #424242;
+  color: white;
+  padding: 0.675rem 2.5rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  border: 1px solid transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button.primary:hover {
+  border: 1px solid #424242;
+  color: #424242;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAV */
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 200;
+  font-size: 1.825rem;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  font-size: .9rem;
+
+}
+
+nav {
+  height: 72px;
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15vw;
+}
+
+nav .links {
+  display: flex;
+  gap: 3rem;
+}
+
+/* HERO */
+#hero {
+/*   max-width: 1600px; */
+  min-height: 560px;
+  padding: 0 var(--page-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  
+ 
+}
+
+#hero h2 {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 55px;
+  color: #19191A;
+  
+  margin-left: 0px;
+}
+
+#hero h3 {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 40px;
+  color: #19191A;
+  margin-top: 10px;
+  margin-left: 00px;
+}
+
+#hero p {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 20px;
+  color: #19191A;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+li{
+display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 60;
+  font-size: 16px;
+  color: #19191A;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+#hero ul {
+  list-style: none;
+}
+
+
+.more{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0px;
+  padding-bottom: 1rem;
+  padding-left: 32rem;
+}
+
+.moreimage{
+  padding-left: 32.5rem;
+}
+/* MAIN (case studies) */
+
+#case-studies {
+  display: flex;
+  padding: var(--page-margin);
+  flex-direction: column;
+  gap: 8rem;
+}
+
+#case-studies .case-study {
+  border: var(--ln);
+  width: 100%;
+  min-height: 360px;
+  border-radius: 1rem;
+  display: flex;
+}
+
+#case-studies .case-study:nth-child(even) {
+  flex-direction: row-reverse; /* this forces every other (even numbered) case study to appear in reverse order */
+}
+
+#case-studies .case-study > * {
+  flex: 1; /* this forces all immediate children of the case study class to share an even amount of space, in this case a 50/50 split */
+  min-height: 100%;
+}
+
+#case-studies .case-study .info {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+#case-studies h6{
+  font-size: 13px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#case-studies h3{
+  padding-top: 1rem;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#case-studies p{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+ 
+}
+
+#NAA{
+  background-color: #027FA2;
+  max-width: fit-content;
+}
+
+#FFH{
+  background-color: #42496F;
+  max-width: fit-content;
+}
+
+#WIRES{
+  background-color: #34542E;
+  max-width: fit-content;
+}
+
+#case-studies .case-study .NAAimage {
+
+  transform: scale(1.35) translate( 1rem, 2rem); /* this is how we get that nice overlap effect */
+/*   background-image: url('...') */ /* Add your images here */
+background-image: url(images/naa.png);
+background-size: contain;
+background-repeat: no-repeat;
+
+}
+
+#case-studies .case-study .FFHimage {
+
+  transform: scale(1.35) translate( -2rem, 2rem); /* this is how we get that nice overlap effect */
+/*   background-image: url('...') */ /* Add your images here */
+background-image: url(images/ffh.png);
+background-size: contain;
+background-repeat: no-repeat;
+
+}
+#case-studies .case-study .WIRESimage {
+
+  transform: scale(1.35) translate( 2rem, 2rem); /* this is how we get that nice overlap effect */
+/*   background-image: url('...') */ /* Add your images here */
+background-image: url(images/wires.png);
+background-size: contain;
+background-repeat: no-repeat;
+
+}
+
+.background {
+  background-image: url(images/bluebackground.png);
+}
+
+footer {
+  height: 250px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  padding: 0 15vw;
+  
+}
+
+
+.resume a{
+  color: white;
+}
+
+footer .images {
+  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+footer .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 139px;
+}
+.footerprojects {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 60;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+.nav {
+  display: none;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    position: static;
+    margin: 20px;
+  }
+  #hero {
+    grid-template-areas:
+    "hero";
+  }
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "case-studies"
+      
+    ;
+  }
+  .footer{
+    position: static;
+    margin: 20px;
+  }
+}
